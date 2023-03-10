@@ -1,8 +1,6 @@
 @extends('front/layout')
 @section('page_title','About Page')
 @section('container')
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -51,6 +49,4 @@
         </div>
     </div>
 </div>
-
-
 @endsection

@@ -1,7 +1,6 @@
 @extends('front/layout')
 @section('page_title','Search')
 @section('container')
-
   <!-- product category -->
 <section id="aa-product-category">
    <div class="container">
@@ -11,10 +10,8 @@
                <div class="aa-product-catg-body">
                   <ul class="aa-product-catg">
                      <!-- start single product item -->
-                     
                      @if(isset($product[0]))
                        @foreach($product as $productArr)
-                      
                         <li>
                           <figure>
                             <a class="aa-product-img" href="{{url('product/'.$productArr->slug)}}"><img src="{{asset('storage/media/'.$productArr->image)}}" alt="{{$productArr->name}}"></a>
@@ -33,18 +30,15 @@
                           <figure>
                         <li>
                         @endif
-                     
                   </ul>
                   <!-- quick view modal -->                  
                </div>
             </div>
          </div>
-         
       </div>
    </div>
 </section>
 <!-- / product category -->
-
 <input type="hidden" id="qty" value="1"/>
   <form id="frmAddToCart">
     <input type="hidden" id="size_id" name="size_id"/>
@@ -53,6 +47,4 @@
     <input type="hidden" id="product_id" name="product_id"/>           
     @csrf
   </form>  
-
- 
 @endsection

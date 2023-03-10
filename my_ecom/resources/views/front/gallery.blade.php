@@ -1,7 +1,6 @@
 @extends('front/layout')
 @section('page_title','Gallery Page')
 @section('container')
-
 <div class="container my-3">
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-3 ">
@@ -25,7 +24,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-sm-6 col-lg-3 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -33,8 +31,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-3 ">
@@ -58,7 +54,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-sm-6 col-lg-3 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -66,10 +61,7 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-4 ">
             <div class="box bg-white">
@@ -83,7 +75,6 @@
             <div class="box bg-white">
                 <div class="img-box">
                     <img src="{{asset('storage/media/gallery/2.jpg')}}" alt="img" style="height:250px; width:100%">
-
                     <p class="card-services"><b>Conduct blood check up camp at Nisarga Ayurveda Center</b></p>
                 </div>
             </div>
@@ -95,8 +86,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-3 ">
@@ -144,11 +133,7 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-3 ">
             <div class="box bg-white">
@@ -195,9 +180,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-3 ">
             <div class="box bg-white">
@@ -221,7 +204,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-sm-6 col-lg-3 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -244,11 +226,8 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <div class="row" style="margin-bottom:10px;">
-
         <div class="col-sm-6 col-lg-4 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -280,16 +259,10 @@
                         allowfullscreen></iframe>
                     <p class="card-services"><b>Complete process of making & applying Hair care powder</b></p>
                 </div>
-
             </div>
-
-
         </div>
-
     </div>
-
     <div class="row" style="margin-bottom:10px;">
-
         <div class="col-sm-6 col-lg-4 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -322,10 +295,8 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="row" style="margin-bottom:10px;">
-
         <div class="col-sm-6 col-lg-4 ">
             <div class="box bg-white">
                 <div class="img-box">
@@ -355,8 +326,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-6 col-lg-4 ">
             <div class="box bg-white">
@@ -382,7 +351,6 @@
         </div>
     </div>
 </div>
-
 <input type="hidden" id="qty" value="1" />
 <form id="frmAddToCart">
     <input type="hidden" id="size_id" name="size_id" />

@@ -1,7 +1,6 @@
 @extends('front/layout')
 @section('page_title','Products Page')
 @section('container')
-
 <div class="container">
     <div class="row" style="margin-top:50px">
         <section id="aa-product">
@@ -13,16 +12,13 @@
                                 <div class="aa-product-inner">
                                     <!-- start prduct navigation -->
                                     <ul class="nav nav-tabs aa-products-tab">
-                                        <li class="all-ul"><a href="" id="all" data-toggle="tab">ALL</a></li>
+                                        <li class="all-ul"><a id="all">ALL</a></li>
                                         @foreach($home_categories as $list)
-                                        <li class="sub-ul"><a href="#cat{{$list->id}}"
-                                                data-toggle="tab">{{$list->category_name}}</a></li>
+                                        <li class="sub-ul"><a href="#cat{{$list->id}}" name="#cat{{$list->id}}"
+                                                class="cat">{{$list->category_name}}</a></li>
                                         @endforeach
                                     </ul>
-
-
                                     <div class="tab-content allcat">
-
                                         @php
                                         $loop_count=1;
                                         @endphp
@@ -34,10 +30,10 @@
                                         $loop_count++;
                                         }
                                         @endphp
-
                                         @if(isset($home_categories_product[$list->id][0]))
                                         @foreach($home_categories_product[$list->id] as $productArr)
-                                        <li class="aa-product-catg tab-pane fade {{$cat_class}}" id="cat{{$list->id}}">
+                                        <li class="aa-product-catg tab-pane fade {{$cat_class}}"
+                                            id="cat{{$list->id}}">
                                             <figure>
                                                 <a class="aa-product-img"
                                                     href="{{url('product/'.$productArr->slug)}}"><img
@@ -54,9 +50,7 @@
                                                     <br />
                                                     <br />
                                                     {{-- <br/> --}}
-
                                                 </figcaption>
-
                                             </figure>
                                             <a class="aa-add-card-btn" href="javascript:void(0)"
                                                 onclick="home_add_to_cart('{{$productArr->id}}')"><span
@@ -65,36 +59,35 @@
                                                 <a class="btn text-white">Chat On Whatsapp</a>
                                             </figcaption>
                                         </li>
-
                                         @endforeach
                                         @endif
-
                                         @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
-
 <script>
-    $(document).ready(function(){
-      $(".tab-pane").addClass("in active");
-      $(".all-ul").addClass(" active");
-      $("#all").click(function(){
-    
+$(document).ready(function(){
+    $(".tab-pane").addClass("in active");
+    $(".all-ul").addClass(" active");
+    $("#all").click(function(){
         $(".tab-pane").addClass("in active");
         $(".allcat>li").addClass(" active");
-      });
-    
     });
-
-    
+    $(".cat").click(function(e) {
+        e.preventDefault();
+        $id = $(this).attr("href");
+        console.log($id);
+        $("li").addClass('in active');
+        $("li").not($id).removeClass('in active');
+    });
+});
 </script>
 <!-- / Client Brand -->
 <input type="hidden" id="qty" value="1" />
@@ -105,5 +98,4 @@
     <input type="hidden" id="product_id" name="product_id" />
     @csrf
 </form>
-
 @endsection

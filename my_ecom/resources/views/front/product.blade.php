@@ -10,7 +10,6 @@ justify-content: space-around
     width:50%;
   }
 </style>
-
 <!-- catg header banner section -->
 <!--<section id="aa-catg-head-banner">
    <div class="aa-catg-head-banner-area">
@@ -27,7 +26,6 @@ justify-content: space-around
    </div>
   </section>-->
 <!-- / catg header banner section -->
-
 <!-- product category -->
 <section id="aa-product-details">
   <div class="container">
@@ -41,20 +39,17 @@ justify-content: space-around
                 <div id="custCarousel" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner d-flex justify-content-around">
                     <?php
-
                     $Image = $product[0]->attr_images;
                     $images = explode(",", $Image);
                     $count = 0;
                     for ($i = 0; $i < count($images); $i++) {
                       if ($count == 0) { ?>
-
                     <div class="item active">
                       <img src="{{asset('storage/media/'.$product[0]->folder_name.'/'. $images[$i] .'.jpg')}}"
                         class="d-block w-50" style="height:250px;" />
                     </div>
                     <?php
                       } else { ?>
-
                     <div class="item ">
                       <img src="{{asset('storage/media/'.$product[0]->folder_name.'/'. $images[$i] .'.jpg')}}"
                         class="d-block w-50"style="height:250px;"  />
@@ -87,8 +82,6 @@ justify-content: space-around
                       $count++;
                     } ?>
                   </ol>
-
-
                 </div>
               </div>
               <!-- Modal view content -->
@@ -99,16 +92,11 @@ justify-content: space-around
                     <span class="aa-product-view-price">Rs
                       {{$product_attr[$product[0]->id][0]->price}}&nbsp;&nbsp;</span>
                   <span class="aa-product-view-price"><del>Rs {{$product_attr[$product[0]->id][0]->mrp}}</del></span>
-
                   <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
-
-
-
                 </div> --}}
                 <p>
                   {!!$product[0]->short_desc!!}
                 </p>
-
                 {{-- @if($product_attr[$product[0]->id][0]->size_id>0)
                     <h4>Size</h4>
                     <div class="aa-prod-view-size">
@@ -118,37 +106,28 @@ justify-content: space-around
                         $arrSize[]=$attr->size;
                       }  
                       $arrSize=array_unique($arrSize);
-                     
                     @endphp
                     @foreach($arrSize as $attr)  
-
                     @if($attr!='')
                       <a href="javascript:void(0)" onclick="showColor('{{$attr}}')" id="size_{{$attr}}"
                 class="size_link">{{$attr}}</a>
                 @endif
-
                 @endforeach
               </div>
               @endif --}}
               {{--                     
-                    
                     @if($product_attr[$product[0]->id][0]->color_id>0)
-                    
                     <h4>Color</h4>
                     <div class="aa-color-tag">
                       @foreach($product_attr[$product[0]->id] as $attr)  
-                      
                       @if($attr->color!='')
-
                       <a href="javascript:void(0)" class="aa-color-{{strtolower($attr->color)}} product_color
               size_{{$attr->size}}"
               onclick=change_product_color_image("{{asset('storage/media/'.$attr->attr_image)}}","{{$attr->color}}")></a>
               @endif
-
               @endforeach
             </div>
             @endif --}}
-
             <div class="aa-prod-quantity">
               <form action="">
                 <select id="qty" name="qty">
@@ -177,7 +156,6 @@ justify-content: space-around
         <li><a href="#warranty" data-toggle="tab">Warranty</a></li>
         <li><a href="#review" data-toggle="tab">Reviews</a></li>
       </ul>
-
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane fade in active" id="description">
@@ -231,12 +209,10 @@ justify-content: space-around
                 </select>
               </div>
               <!-- review form -->
-
               <div class="form-group">
                 <label for="message">Your Review</label>
                 <textarea class="form-control" rows="3" name="review" required></textarea>
               </div>
-
               <button type="submit" class="btn btn-default aa-review-submit">Submit</button>
               <input type="hidden" name="product_id" value="{{$product[0]->id}}" />
               @csrf
@@ -250,7 +226,6 @@ justify-content: space-around
      <div class="aa-product-related-item">
       <h3>Related Products</h3>
       <ul class="aa-product-catg aa-related-item-slider">
-
         @if(isset($related_product[0]))
         @foreach($related_product as $productArr)
         <li>
@@ -275,8 +250,6 @@ justify-content: space-around
             <figure>
         <li>
           @endif
-
-
       </ul>
     </div> --}}
   </div>

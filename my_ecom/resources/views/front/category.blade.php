@@ -1,7 +1,6 @@
 @extends('front/layout')
 @section('page_title','Category')
 @section('container')
-
   <!-- product category -->
 <section id="aa-product-category">
    <div class="container">
@@ -30,10 +29,8 @@
                <div class="aa-product-catg-body">
                   <ul class="aa-product-catg">
                      <!-- start single product item -->
-                     
                      @if(isset($product[0]))
                        @foreach($product as $productArr)
-                      
                         <li>
                           <figure>
                             <a class="aa-product-img" href="{{url('product/'.$productArr->slug)}}"><img src="{{asset('storage/media/'.$productArr->image)}}" alt="{{$productArr->name}}"></a>
@@ -52,7 +49,6 @@
                           <figure>
                         <li>
                         @endif
-                     
                   </ul>
                   <!-- quick view modal -->                  
                </div>
@@ -91,14 +87,11 @@
                   <h3>Shop By Color</h3>
                   <div class="aa-color-tag">
                      @foreach($colors as $color)
-
                      @if(in_array($color->id,$colorFilterArr))
                         <a class="aa-color-{{strtolower($color->color)}} active_color" href="javascript:void(0)" onclick="setColor('{{$color->id}}','1')"></a>
                      @else
                         <a class="aa-color-{{strtolower($color->color)}}" href="javascript:void(0)" onclick="setColor('{{$color->id}}','0')"></a>
                      @endif
-
-
                      @endforeach
                   </div>
                </div> --}}
@@ -108,7 +101,6 @@
    </div>
 </section>
 <!-- / product category -->
-
 <input type="hidden" id="qty" value="1"/>
   <form id="frmAddToCart">
     {{-- <input type="hidden" id="size_id" name="size_id"/> --}}
@@ -117,7 +109,6 @@
     <input type="hidden" id="product_id" name="product_id"/>           
     @csrf
   </form>  
-
   <form id="categoryFilter">
     <input type="hidden" id="sort" name="sort" value="{{$sort}}"/>
     <input type="hidden" id="filter_price_start" name="filter_price_start" value="{{$filter_price_start}}"/>

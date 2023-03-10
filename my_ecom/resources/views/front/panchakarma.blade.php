@@ -1,9 +1,7 @@
 @extends('front/layout')
 @section('page_title','Panchakarma Page')
 @section('container')
-
 <div class="container my-3">
-
     <div class="col-sm-6">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -33,7 +31,6 @@
     <div class="col-sm-12">
         <h1 class="fw-bold">PANCHKARMA THERAPIES</h1>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -73,15 +70,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -95,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -109,7 +96,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -123,8 +109,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -138,7 +122,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -152,7 +135,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -179,7 +161,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -193,7 +174,6 @@
             </div>
         </div>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -210,7 +190,6 @@
     <div class="col-sm-12">
         <h1 class="fw-bold">BEAUTY TREATEMENT</h1>
     </div>
-
     <div class="col-sm-4">
         <div class="card card-default bg-white">
             <div class="card-body card-6-6">
@@ -259,7 +238,6 @@
                 <div class="card-left">
                     <img src="{{asset('storage/media/panchkarma/offer.jpg')}}" class="card-img-top" width="100%"
                         alt="Card image cap">
-
                 </div>
             </div>
         </div>
@@ -270,15 +248,11 @@
                 <div class="card-left">
                     <img src="{{asset('storage/media/panchkarma/packages.jpg')}}" class="card-img-top" width="100%"
                         alt="Card image cap">
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
-
 <input type="hidden" id="qty" value="1" />
 <form id="frmAddToCart">
     <input type="hidden" id="size_id" name="size_id" />

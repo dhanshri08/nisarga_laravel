@@ -1,18 +1,9 @@
 @extends('front/layout')
 @section('page_title','Checkout')
 @section('container')
-
 <!-- catg header banner section -->
-<section id="aa-catg-head-banner">
-   <div class="aa-catg-head-banner-area">
-     <div class="container">
-      
-     </div>
-   </div>
-  </section>
-  <!-- / catg header banner section -->         
 
-  
+  <!-- / catg header banner section -->         
   <section id="checkout">
    <div class="container">
      <div class="row">
@@ -55,8 +46,6 @@
                               </div>
                             </div>
                           </div> 
-                            
-                            
                           <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
@@ -81,7 +70,6 @@
                               </div>
                             </div>
                           </div>   
-                                       
                         </div>
                       </div>
                     </div>
@@ -104,11 +92,9 @@
                         $totalPrice=0;
                         @endphp
                         @foreach($cart_data as $list)
-
                         @php 
                         $totalPrice=$totalPrice+($list->price*$list->qty)
                         @endphp
-
                         <tr>
                           <td>{{$list->name}}  <strong> x  {{$list->qty}}</strong>
                           <br/>
@@ -142,10 +128,8 @@
                     <label for="cod"><input type="radio" id="cod" name="payment_type" value="COD" checked> Cash on Delivery </label>
                     <label for="instamojo">
                     <input type="radio" id="instamojo" name="payment_type" value="Gateway"> Via Instamojo </label>
-                    
                     <input type="submit" value="Place Order" class="aa-browse-btn btn btn-success" id="btnPlaceOrder">                
                   </div>
-
                   <div id="order_place_msg"></div>
                 </div>
               </div>
@@ -157,5 +141,4 @@
      </div>
    </div>
  </section>
- 
 @endsection

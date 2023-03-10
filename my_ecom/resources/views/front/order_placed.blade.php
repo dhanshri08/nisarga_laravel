@@ -1,7 +1,6 @@
 @extends('front/layout')
 @section('page_title','Order Placed')
 @section('container')
-
   <!-- product category -->
 <section id="aa-product-category">
    <div class="container">

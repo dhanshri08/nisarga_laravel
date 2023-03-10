@@ -1,17 +1,14 @@
 @extends('front/layout')
 @section('page_title','Cart Page')
 @section('container')
-
 <!-- catg header banner section -->
 <section id="aa-catg-head-banner">
    <div class="aa-catg-head-banner-area">
      <div class="container">
-      
      </div>
    </div>
   </section>
   <!-- / catg header banner section -->         
-
   <section id="cart-view">
    <div class="container">
      <div class="row">
@@ -52,8 +49,7 @@
                       @endforeach
                       <tr>
                         <td colspan="6" class="aa-cart-view-bottom">
-                          
-                          <a class="aa-cartbox-checkout aa-primary-btn" href="{{url('/checkout')}}"><input class="aa-cart-view-btn" type="button" value="Checkout"></a>
+                          <a class="aa-cartbox-checkout aa-primary-btn" href="{{url('/checkout')}}"><input class="aa-cart-view-btn btn btn-primary" type="button" value="Checkout"></a>
                         </td>
                       </tr>
                       </tbody>
@@ -64,7 +60,6 @@
                 @endif  
              </form>
              <!-- Cart Total view -->
-           
 		   </div>
          </div>
        </div>

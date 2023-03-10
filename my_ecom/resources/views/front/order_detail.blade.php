@@ -1,17 +1,14 @@
 @extends('front/layout')
 @section('page_title','Order Detail')
 @section('container')
-
 <!-- catg header banner section -->
 <section id="aa-catg-head-banner">
    <div class="aa-catg-head-banner-area">
      <div class="container">
-      
      </div>
    </div>
   </section>
   <!-- / catg header banner section -->         
-
   <section id="cart-view">
    <div class="container">
      <div class="row">
@@ -36,13 +33,10 @@
           <b>Track Details</b><br/>
           {{$orders_details[0]->track_details}} 
       </div>
-     
-
        <div class="col-md-12">
          <div class="cart-view-area">
            <div class="cart-view-table">
              <form action="">
-             
                <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -93,15 +87,12 @@
                           <td>'.$totalAmt.'</td>
                         </tr>';
                       }
-                      
-                      
                       ?>
                     </tbody>
                   </table>
                 </div>
              </form>
              <!-- Cart Total view -->
-           
 		   </div>
          </div>
        </div>

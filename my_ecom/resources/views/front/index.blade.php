@@ -4,7 +4,6 @@
 <div class="container">
   <div class="row p-3 shadow-lg text-center">
     <div class="col-sm-12">
-
       <h3 class="fw-bold">Nisarga Ayurveda Chikitsa & Panchakarma Center Nagpur </h3>
     </div>
     <div class="col-md-10  p-2">
@@ -20,7 +19,6 @@
             style="height: 260px; width:100%; margin-top: -10px; " alt="">
         </div>
         <div class="col-md-4">
-
           <img src="{{asset('storage/media/home/all.jpg')}}" class="pt-3" style="height:180px;  width:100%;" alt="">
         </div>
       </div>
@@ -28,11 +26,9 @@
         <h3 class="FW-BOLD m-0 text-center h44">
           Founder of Nisarga Ayurveda : Vd Megha Kelwade
         </h3>
-
       </div>
     </div>
     <div class="col-md-2" style="padding-left:0px;">
-
       <img src="{{asset('storage/media/home/crop.jpg')}}" style="height:355px; width:100%;" alt="">
     </div>
   </div>
@@ -70,8 +66,6 @@
       </div>
     </div>
     <div class="col-sm-3 ">
-
-
       <div class="card card-default bg-white">
         <div class="card-body card-7-5">
           <div class="card-left">
@@ -84,11 +78,8 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="col-sm-3 ">
-
-
       <div class="card card-default bg-white">
         <div class="card-body card-7-5">
           <div class="card-left">
@@ -101,11 +92,8 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="col-sm-3 ">
-
-
       <div class="card card-default bg-white">
         <div class="card-body card-7-5">
           <div class="card-left">
@@ -119,57 +107,45 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <div class="row" style="margin-top:50px">
     <h3 class="text-center">Our Products</h3>
     <div id="carousel-home-products" class="carousel slide" data-ride="carousel">
-
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <?php
           $count = 0;				
         ?>
-
         @foreach($users as $user)
         @if ($count == 0 )
-
         <div class="item active">
-
-
           <div class="col-md-8" style="padding:0 10px">
             <h3 class="text-center">{{ $user->name }}</h3>
             {{-- <p class="text-center">{{ $user->desc }}</p> --}}
-
             {!!$user->short_desc!!}
-
             {{-- {{ $user->image }} --}}
           </div>
           <div class="col-md-4" style="height:100%">
-            <img src="{{asset('storage/media/'.$user->image)}}" alt="Los Angeles" style="width:100%; height:100%">
-
+            <img 
+            {{-- src="{{asset('storage/media/'.$user->image)}}" --}}
+            src="{{asset('storage/media/'.$user->folder_name.'/1.jpg')}}"
+            alt="img" style="width:100%; height:100%">
           </div>
         </div>
-
         @else
-
-
         <div class="item ">
-
-
           <div class="col-md-8" style="padding:0 10px">
             <h3 class="text-center">{{ $user->name }}</h3>
             {{-- <p class="text-center">{{ $user->desc }}</p> --}}
-
             {!!$user->short_desc!!}
-
             {{-- {{ $user->image }} --}}
           </div>
           <div class="col-md-4" style="height:100%">
-            <img src="{{asset('storage/media/'.$user->image)}}" alt="Los Angeles" style="width:100%; height:100%">
-
-
+            <img 
+            {{-- src="{{asset('storage/media/'.$user->image)}}"  --}}
+            src="{{asset('storage/media/'.$user->folder_name.'/1.jpg')}}"
+            alt="img" style="width:100%; height:100%">
           </div>
         </div>
         @endif
@@ -177,10 +153,7 @@
             $count = $count + 1;
         ?>
         @endforeach
-
-
       </div>
-
       <!-- Left and right controls -->
       <a class="left carousel-control" href="#carousel-home-products" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -193,8 +166,6 @@
     </div>
   </div>
 </div>
-
-
 {{-- <section id="aa-slider">
   <div class="aa-slider-area">
     <div id="sequence" class="seq">
@@ -354,8 +325,6 @@
               <div class="tab-pane fade in active" id="featured">
                 <ul class="aa-product-catg aa-featured-slider">
                   <!-- start single product item -->
-
-
                   @if(isset($home_featured_product[$list->id][0]))
                   @foreach($home_featured_product[$list->id] as $productArr)
                   <li>
@@ -386,7 +355,6 @@
                 </ul>
               </div>
               <!-- / popular product category -->
-
               <!-- start tranding product category -->
               <div class="tab-pane fade" id="tranding">
                 <ul class="aa-product-catg aa-tranding-slider">
@@ -421,12 +389,10 @@
                 </ul>
               </div>
               <!-- / featured product category -->
-
               <!-- start discounted product category -->
               <div class="tab-pane fade" id="discounted">
                 <ul class="aa-product-catg aa-discounted-slider">
                   <!-- start single product item -->
-
                   @if(isset($home_discounted_product[$list->id][0]))
                   @foreach($home_discounted_product[$list->id] as $productArr)
                   <li>
@@ -501,7 +467,6 @@
   </div>
 </section>
 <!-- / Support section -->
-
 <!-- Client Brand -->
 <section id="aa-client-brand">
   <div class="container">
@@ -528,6 +493,5 @@
   @csrf
 </form>
 <script>
-
 </script>
 @endsection
